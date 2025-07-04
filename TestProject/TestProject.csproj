@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TestMonopoly\TestMonopoly.csproj">
+    <ProjectReference Include="..\TestMonopoly\MonopolyShelf.csproj">
       <Project>{30151fcf-e654-4bd3-8305-df314e503363}</Project>
-      <Name>TestMonopoly</Name>
+      <Name>MonopolyShelf</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
