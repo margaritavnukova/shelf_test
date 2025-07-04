@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BoxesDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Boxes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Width" Type="float" Nullable="false" />
+    <Property Name="Height" Type="float" Nullable="false" />
+    <Property Name="Depth" Type="float" Nullable="false" />
+    <Property Name="Weight" Type="float" Nullable="false" />
+    <Property Name="ProductionDate" Type="datetime" />
+    <Property Name="Pallet" Type="int" />
+  </EntityType>
+  <EntityType Name="Pallets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Width" Type="float" Nullable="false" />
+    <Property Name="Height" Type="float" Nullable="false" />
+    <Property Name="Depth" Type="float" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__Boxes__Pallet__403A8C7D">
+    <End Role="Pallets" Type="Self.Pallets" Multiplicity="0..1" />
+    <End Role="Boxes" Type="Self.Boxes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pallets">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Boxes">
+        <PropertyRef Name="Pallet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BoxesDBModelContainer">
+    <EntitySet Name="Boxes" EntityType="Self.Boxes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pallets" EntityType="Self.Pallets" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Boxes__Pallet__403A8C7D" Association="Self.FK__Boxes__Pallet__403A8C7D">
+      <End Role="Pallets" EntitySet="Pallets" />
+      <End Role="Boxes" EntitySet="Boxes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

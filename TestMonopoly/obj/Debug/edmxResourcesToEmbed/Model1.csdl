@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BoxesDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Boxes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Width" Type="Double" Nullable="false" />
+    <Property Name="Height" Type="Double" Nullable="false" />
+    <Property Name="Depth" Type="Double" Nullable="false" />
+    <Property Name="Weight" Type="Double" />
+    <Property Name="ProductionDate" Type="DateTime" Precision="3" />
+    <Property Name="Pallet" Type="Int32" />
+    <NavigationProperty Name="Pallets" Relationship="Self.FK__Boxes__Pallet__3E52440B" FromRole="Boxes" ToRole="Pallets" />
+  </EntityType>
+  <EntityType Name="Pallets">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Width" Type="Double" Nullable="false" />
+    <Property Name="Height" Type="Double" Nullable="false" />
+    <Property Name="Depth" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Boxes" Relationship="Self.FK__Boxes__Pallet__3E52440B" FromRole="Pallets" ToRole="Boxes" />
+  </EntityType>
+  <Association Name="FK__Boxes__Pallet__3E52440B">
+    <End Role="Pallets" Type="Self.Pallets" Multiplicity="0..1" />
+    <End Role="Boxes" Type="Self.Boxes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pallets">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Boxes">
+        <PropertyRef Name="Pallet" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BoxesDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Boxes" EntityType="Self.Boxes" />
+    <EntitySet Name="Pallets" EntityType="Self.Pallets" />
+    <AssociationSet Name="FK__Boxes__Pallet__3E52440B" Association="Self.FK__Boxes__Pallet__3E52440B">
+      <End Role="Pallets" EntitySet="Pallets" />
+      <End Role="Boxes" EntitySet="Boxes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

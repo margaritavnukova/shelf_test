@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BoxesDBModelContainer" CdmEntityContainer="BoxesDBEntities">
+    <EntitySetMapping Name="Boxes">
+      <EntityTypeMapping TypeName="BoxesDBModel.Boxes">
+        <MappingFragment StoreEntitySet="Boxes">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ProductionDate" ColumnName="ProductionDate" />
+          <ScalarProperty Name="Pallet" ColumnName="Pallet" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pallets">
+      <EntityTypeMapping TypeName="BoxesDBModel.Pallets">
+        <MappingFragment StoreEntitySet="Pallets">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Depth" ColumnName="Depth" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

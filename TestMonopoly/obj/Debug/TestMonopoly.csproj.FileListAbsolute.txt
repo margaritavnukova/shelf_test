@@ -1,0 +1,15 @@
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\TestMonopoly.exe.config
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\TestMonopoly.exe
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\TestMonopoly.pdb
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\EntityFramework.dll
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\EntityFramework.xml
+C:\Users\Vitra\TestMonopoly\TestMonopoly\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.csproj.AssemblyReference.cache
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.Form1.resources
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.Properties.Resources.resources
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.csproj.GenerateResource.cache
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.csproj.CoreCompileInputs.cache
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.csproj.CopyComplete
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.exe
+C:\Users\Vitra\TestMonopoly\TestMonopoly\obj\Debug\TestMonopoly.pdb
