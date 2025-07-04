@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace TestMonopoly.Services
 {
+    /// <summary>
+    /// Репозиторий для работы с таблицей паллет в базе данных.
+    /// </summary>
     public class PalletsRepo : BaseRepo<Pallets>
     {
         public override List<Pallets> Initialize()

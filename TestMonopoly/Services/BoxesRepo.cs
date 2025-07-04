@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace TestMonopoly.Services
 {
+    /// <summary>
+    /// Репозиторий для работы с таблицей коробок в базе данных
+    /// </summary>
     public class BoxesRepo : BaseRepo<Boxes>
     {
         public override List<Boxes> Initialize()
